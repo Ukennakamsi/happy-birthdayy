@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy 19th Birthday My Baby Eghosaaa!!</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sacramento&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<style>
+/* BODY & GRADIENT */
+body{
+  background: linear-gradient(-45deg, #9be7a1, #ffcce6, #a3d8ff, #ffd6ec);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: 'Quicksand', sans-serif;
+  color:white;
+  margin:0; padding:0; overflow-x:hidden; text-align:center;
+}
+@keyframes gradient{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* HEADINGS AND PARAGRAPHS */
+h1,h2{ font-family:'Dancing Script', cursive; font-weight:700; }
+p{ font-size:22px; line-height:1.6em; }
+
+/* BUTTONS */
+button{
+  padding:14px 28px;
+  border-radius:25px;
+  border:none;
+  background:white;
+  font-size:18px;
+  cursor:pointer;
+  margin:15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: floatButton 3s ease-in-out infinite alternate;
+}
+button:hover{
+  transform: scale(1.1);
+  box-shadow:0 0 20px #ffe6f2;
+}
+@keyframes floatButton{
+  0%{transform:translateY(0px);}
+  100%{transform:translateY(-10px);}
+}
+
+/* 19 THINGS PANEL */
+#lovePanel{
+  position:fixed;
+  top:20px; right:20px;
+  width:250px; height:calc(100vh - 40px);
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:15px;
+  overflow-y:auto;
+  font-size:18px;
+  line-height:1.5em;
+  z-index:5;
+}
+
+/* POPUPS */
+.popup {
+  position: fixed;
+  top: 0; left:0;
+  width:100vw; height:100vh;
+  background: rgba(0,0,0,0.4);
+  display:flex; justify-content:center; align-items:flex-end;
+  opacity:0; pointer-events:none;
+  transition: opacity 0.6s ease;
+  z-index:10;
+}
+.popup.show {
+  opacity:1; pointer-events:auto;
+}
+.popupContent {
+  background: #fff8f0;
+  padding:30px;
+  border-radius:20px 20px 0 0;
+  max-width:700px;
+  max-height:80vh;
+  overflow-y:auto;
+  font-family:'Dancing Script', cursive;
+  font-size:20px; line-height:1.6;
+  color:#000;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+}
+.popup.show .popupContent{
+  transform: translateY(0);
+}
+
+/* FLOATING "Kamsi loves Eghosa" */
+.floatingLetter{
+  position: fixed;
+  top:-30px;
+  color:#ff69b4;
+  font-family:'Sacramento', cursive;
+  font-size:12px;
+  z-index:1;
+  pointer-events:none;
+  animation-name:fallLetters;
+  animation-timing-function: linear;
+}
+@keyframes fallLetters {
+  0%{ transform: translateY(-30px);}
+  100%{ transform: translateY(110vh);}
+}
+
+/* FLOATING CAKES */
+.floatingCake{
+  position: fixed;
+  top:-50px;
+  font-size:25px;
+  color:#4CAF50;
+  z-index:0;
+  pointer-events:none;
+  animation-name:fallCake;
+  animation-timing-function: linear;
+}
+@keyframes fallCake {
+  0%{ transform: translateY(-50px) rotate(0deg);}
+  50%{ transform: translateY(50vh) rotate(10deg);}
+  100%{ transform: translateY(110vh) rotate(-10deg);}
+}
+
+/* START PAGE */
+#start{
+  padding:50px;
+}
+#buttons{ margin-top:30px; display:none;}
+</style>
+</head>
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="Bruno-Mars-Risk-It-All-(AmkLoaded).mp3" type="audio/mpeg">
+</audio>
+
+<!-- 19 Things Panel -->
+<div id="lovePanel">
+  <h2>19 Things I Love About You</h2>
+  <div id="loveList"></div>
+</div>
+
+<!-- START PAGE -->
+<div id="start">
+  <h1>For you my baby Eghosaaa 🤍</h1>
+  <p>Yayyy, You found it.</p>
+  <p>Tap below to begin your birthday surprise my love.</p>
+  <button id="openBtn">Open</button>
+</div>
+
+<!-- BUTTONS FOR POPUPS -->
+<div id="buttons">
+  <button onclick="openPopup('poemPopup')">Poem</button>
+  <button onclick="openPopup('memoryPopup')">Memory</button>
+  <button onclick="openPopup('letterPopup')">Final Letter</button>
+</div>
+
+<!-- POEM POPUP -->
+<div id="poemPopup" class="popup">
+  <div class="popupContent">
+    <h2>My Birthday Poem for You</h2>
+    <p>
+      Eghosa, my love, today you turn nineteen,<br>
+      But every day with you feels serene.<br>
+      Since 2023, you’ve been my calm, my joy,<br>
+      The one who makes my heart dance, my favorite boy.<br><br>
+      I love your shy smiles, the way you hide from the camera,<br>
+      How you get so particular about your shows like Black Clover,<br>
+      And how old jazz songs or spider lilies catch your gaze,<br>
+      Moments like these I could watch for all my days.<br><br>
+      You’re patient and soft with me, my sweetest love,<br>
+      Kind in ways that remind me how blessed we are,<br>
+      Your laughter, your calm, your quiet little ways,<br>
+      Have filled my life with light and gentle rays.<br><br>
+      I love how hard you work, how you care,<br>
+      Every little habit, every word, every glance,<br>
+      Makes me fall again and again, caught in our dance.<br><br>
+      You’ve been dear to me since the very start,<br>
+      Loved for your heart, your patience, your art,<br>
+      The way you love shows, the way you love life,<br>
+      Every little thing about you makes me thankful you’re mine.<br><br>
+      So here’s my heart, laid bare just for you today,<br>
+      Every word, every feeling, in my own way.<br>
+      Happy 19th birthday, my love, my light,<br>
+      I love you endlessly, every morning, noon, and night.
+    </p>
+  </div>
+</div>
+
+<!-- MEMORY POPUP -->
+<div id="memoryPopup" class="popup">
+  <div class="popupContent">
+    <h2>Memory</h2>
+    <p>
+      The day we first spoke on a call that lasted for so long,<br>
+      everything felt calm, and I laughed at your jokes.<br>
+      I pranced around with excitement I couldn’t contain,<br>
+      never knew getting to know someone could feel so exhilarating.<br><br>
+      Like the world had taken a deep breath, and I was learning to hold you dear to my heart.
+    </p>
+  </div>
+</div>
+
+<!-- FINAL LETTER POPUP -->
+<div id="letterPopup" class="popup">
+  <div class="popupContent">
+    <h2>Final Letter</h2>
+    <p>
+      Happy 19th birthday Eghosaaa my babyy!<br><br>
+
+      Sometimes I wonder if you realize how beautifully you exist in my world.<br>
+      You appear in small places <br>
+      in songs that suddenly feel warmer,<br>
+      in quiet moments that feel less lonely,<br>
+      in days that become better simply because you are in them.<br><br>
+
+      You are not just someone I care about.<br>
+      You are someone who has quietly woven himself into my thoughts,<br>
+      my laughter, and the calm parts of my heart.<br><br>
+
+      Today you turn nineteen.<br>
+      And I hope this year gives you things the world doesn't always promise:<br>
+      peace when life feels loud,<br>
+      courage when things feel uncertain,<br>
+      and joy that arrives without needing permission.<br><br>
+
+      But most of all, I hope you feel loved today.<br>
+      Because somewhere in this world there is someone who looks at you and quietly thanks God that you exist.<br><br>
+
+      And today, that person is me.<br><br>
+
+      Happy Birthdayyy My Sweet Shaylaa 🤍
+    </p>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+
+  // MUSIC
+  let music=document.getElementById("music");
+
+  // 19 THINGS
+  let loves = [
+    "1. Your smile","2. The way you listen to me","3. Your patience","4. Your laugh","5. How calm you make me feel ",
+    "6. Your kindness","7. Your voice","8. The way you think","9. Your quiet strength","10. The way you care",
+    "11. Your humor","12. The way you understand me","13. Your presence","14. The way you look at things",
+    "15. Your honesty","16. The way you protect people you love","17. Your heart","18. The way you exist in my world",
+    "19. The fact that you are you"
+  ];
+  let loveListDiv=document.getElementById("loveList");
+  loves.forEach(l=>{
+    let p=document.createElement("p");
+    p.textContent=l;
+    loveListDiv.appendChild(p);
+  });
+
+  // OPEN BUTTON
+  document.getElementById("openBtn").addEventListener("click",()=>{
+    music.play();
+    document.getElementById("start").style.display="none";
+    document.getElementById("buttons").style.display="block";
+  });
+
+  // POPUPS
+  window.openPopup=function(id){
+    document.getElementById(id).classList.add('show');
+  }
+  document.querySelectorAll('.popup').forEach(p=>{
+    p.addEventListener('click',e=>{
+      if(e.target===p) p.classList.remove('show');
+    });
+  });
+
+  // FLOATING "Kamsi loves Eghosa"
+  function createFloatingLetter(){
+    let letter=document.createElement("div");
+    letter.className="floatingLetter";
+    letter.textContent="Kamsi loves Eghosa";
+    letter.style.left=Math.random()*80+"vw";
+    letter.style.fontSize=10+Math.random()*6+"px";
+    letter.style.animationDuration=10+Math.random()*7+"s";
+    document.body.appendChild(letter);
+    setTimeout(()=>letter.remove(),12000);
+  }
+  setInterval(createFloatingLetter,2000);
+
+  // FLOATING CAKES
+  function createFloatingCake(){
+    let cake=document.createElement("div");
+    cake.className="floatingCake";
+    cake.innerHTML="🎂🕯";
+    cake.style.left=Math.random()*90+"vw";
+    cake.style.fontSize=20+Math.random()*15+"px";
+    cake.style.animationDuration=8+Math.random()*5+"s";
+    document.body.appendChild(cake);
+    setTimeout(()=>cake.remove(),12000);
+  }
+  setInterval(createFloatingCake,2500);
+
+});
+</script>
+
+</body>
+</html>
